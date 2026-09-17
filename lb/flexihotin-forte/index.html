@@ -137,6 +137,9 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 /* form card */
 .form-card{background:#fff; border:2px solid var(--accent); border-radius:18px; padding:18px; color:var(--ink); box-shadow:var(--shadow)}
 .form-card h3{margin-bottom:2px; font-size:18px}
+.howq{display:flex; align-items:center; justify-content:space-between; width:100%; background:none; border:none; padding:0 0 8px; margin:0; font:inherit; font-weight:800; font-size:18px; color:var(--ink); cursor:pointer; text-align:left}
+.howq .chev{font-size:16px; color:var(--accent); transition:transform .25s} .howq[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.steps4[hidden]{display:none}
 .form-card .sub{color:var(--muted); font-size:13.5px; margin-bottom:12px}
 .inp{width:100%; padding:14px 15px; border:1.5px solid #cfd8e3; border-radius:12px; font-size:16px; font-family:inherit; outline:none; margin-bottom:10px;
   transition:border-color .15s, box-shadow .15s}
@@ -311,7 +314,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <div class="product-card">
           <span class="disc-ribbon disc"></span>
           <img src="../../img/lbhd-18930.webp" alt="Flexihotin Forte" width="640" height="464" fetchpriority="high" decoding="async">
-          <div><span class="ribbon">Gratis</span><div class="shotcap">Diese Originalverpackung bringt Ihnen der Zusteller: Siegel, Chargennummer, Haltbarkeitsdatum</div></div>
+          <div><span class="ribbon">1 Packung geschenkt</span><div class="shotcap">Diese Originalverpackung bringt Ihnen der Zusteller: Siegel, Chargennummer, Haltbarkeitsdatum</div></div>
         </div>
       </div>
         <div class="scarcity" id="scarcity">
@@ -328,30 +331,30 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <h1>Flexihotin Forte® — die einzige offizielle Website des Herstellers in Deutschland</h1>
         <p class="sub-h">Flexihotin Forte direkt vom Hersteller: keine Vorkasse, Sie zahlen erst beim Zusteller.</p>
         <div class="price-box">
-          <span class="price-new">1 PACK. GRATIS</span>
+          <span class="price-new">+1 Packung GESCHENKT</span>
           <span class="price-old"></span>
           <span class="save-badge disc"></span>
         </div>
-        <p class="pricenote">Herstelleraktion: erste Packung gratis, es fällt nur der Versand an.</p>
+        <p class="pricenote">Herstelleraktion: zu jeder Bestellung eine Packung geschenkt. Den Preis bestätigt Ihnen der Berater am Telefon.</p>
 
         <div class="form-card">
           <form class="order-form" autocomplete="on" novalidate>
-            <h3>Originalprodukt bestellen</h3>
-            <ol class="steps4"><li>Sie hinterlassen Ihren Namen und Ihre Telefonnummer</li><li>Ein Berater ruft an und bestätigt Adresse und Liefertermin, keine Kartendaten</li><li>Der Zusteller bringt das Paket in 1-3 Tagen</li><li>Sie prüfen das Paket bei der Übergabe und zahlen beim Zusteller</li></ol>
+            <button type="button" class="howq" aria-expanded="false">Wie bestellen?<span class="chev">▾</span></button>
+            <ol class="steps4" hidden><li>Sie hinterlassen Ihren Namen und Ihre Telefonnummer</li><li>Ein Berater ruft an und bestätigt Adresse und Liefertermin, keine Kartendaten</li><li>Der Zusteller bringt das Paket in 1-3 Tagen</li><li>Sie prüfen das Paket bei der Übergabe und zahlen beim Zusteller</li></ol>
             <input class="inp" type="text" name="name" placeholder="Vor- und Nachname" autocomplete="name">
             <div class="phone-field"><span class="p48">🇩🇪 +49</span><input class="inp" type="tel" name="phone" placeholder="151 23456789" inputmode="numeric" autocomplete="tel"></div>
             <p class="ph-err">Bitte geben Sie eine gültige Telefonnummer ein</p>
             <p class="phonewhy">Die Nummer ist für den Bestätigungsanruf nötig und wird nur an den Verkäufer, den Bestätigungsdienst und den Zusteller weitergegeben.</p>
             <input type="hidden" name="kw" value="de-lb-flexihotin-forte">
-            <button class="btn btn-primary btn-cta" type="submit">GRATIS ERHALTEN</button>
+            <button class="btn btn-primary btn-cta" type="submit">MIT GESCHENK BESTELLEN</button>
             <p class="today-line">🛒 Heute haben bereits bestellt <b class="todayN">—</b> Personen</p>
-            <p class="form-note">Sie zahlen nur den Versand — bei Lieferung</p>
+            <p class="form-note">Zahlung bei Erhalt der Sendung; die geschenkte Packung liegt im selben Paket bei</p>
           </form>
           <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <b>Vielen Dank! Ihre Bestellung ist eingegangen.</b><p class="ok-when"></p><p class="ok-keep">🔔 Halten Sie Ihr Telefon bereit und nehmen Sie den Anruf an.</p></div>
         </div>
         <div class="sig">
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Produkt<br>gratis</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Eine Packung<br>geschenkt</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Kurier<br>1-3 Tage</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M9 11l1.5 1.5L13.5 9"/></svg>Prüfen<br>vor dem Bezahlen</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Berater<br>ruft zurück</div>
@@ -549,7 +552,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
           <div class="eyebrow" style="color:#7fb0ff">Die einzige offizielle Website des Herstellers</div>
           <h2>Das Original Flexihotin Forte® bestellen</h2>
           <p class="muted" style="font-size:14.5px">Füllen Sie das Formular aus: Ein Berater ruft Sie innerhalb weniger Minuten zurück und bestätigt Adresse und Liefertermin. Keine Vorkasse.</p>
-          <div class="price-box"><span class="price-new">1 PACK. GRATIS</span><span class="price-old"></span><span class="save-badge disc"></span></div>
+          <div class="price-box"><span class="price-new">+1 Packung GESCHENKT</span><span class="price-old"></span><span class="save-badge disc"></span></div>
           <ul class="perks">
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Zahlung erst bei Lieferung</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Prüfung vor dem Bezahlen</li>
@@ -559,16 +562,16 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         </div>
         <div class="form-card">
           <form class="order-form" autocomplete="on" novalidate>
-            <h3>Originalprodukt bestellen</h3>
-            <ol class="steps4"><li>Sie hinterlassen Ihren Namen und Ihre Telefonnummer</li><li>Ein Berater ruft an und bestätigt Adresse und Liefertermin, keine Kartendaten</li><li>Der Zusteller bringt das Paket in 1-3 Tagen</li><li>Sie prüfen das Paket bei der Übergabe und zahlen beim Zusteller</li></ol>
+            <button type="button" class="howq" aria-expanded="false">Wie bestellen?<span class="chev">▾</span></button>
+            <ol class="steps4" hidden><li>Sie hinterlassen Ihren Namen und Ihre Telefonnummer</li><li>Ein Berater ruft an und bestätigt Adresse und Liefertermin, keine Kartendaten</li><li>Der Zusteller bringt das Paket in 1-3 Tagen</li><li>Sie prüfen das Paket bei der Übergabe und zahlen beim Zusteller</li></ol>
             <input class="inp" type="text" name="name" placeholder="Vor- und Nachname" autocomplete="name">
             <div class="phone-field"><span class="p48">🇩🇪 +49</span><input class="inp" type="tel" name="phone" placeholder="151 23456789" inputmode="numeric" autocomplete="tel"></div>
             <p class="ph-err">Bitte geben Sie eine gültige Telefonnummer ein</p>
             <p class="phonewhy">Die Nummer ist für den Bestätigungsanruf nötig und wird nur an den Verkäufer, den Bestätigungsdienst und den Zusteller weitergegeben.</p>
             <input type="hidden" name="kw" value="de-lb-flexihotin-forte">
-            <button class="btn btn-primary btn-cta" type="submit">GRATIS ERHALTEN</button>
+            <button class="btn btn-primary btn-cta" type="submit">MIT GESCHENK BESTELLEN</button>
             <p class="today-line">🛒 Heute haben bereits bestellt <b class="todayN">—</b> Personen</p>
-            <p class="form-note">Sie zahlen nur den Versand — bei Lieferung</p>
+            <p class="form-note">Zahlung bei Erhalt der Sendung; die geschenkte Packung liegt im selben Paket bei</p>
           </form>
           <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <b>Vielen Dank! Ihre Bestellung ist eingegangen.</b><p class="ok-when"></p><p class="ok-keep">🔔 Halten Sie Ihr Telefon bereit und nehmen Sie den Anruf an.</p></div>
@@ -589,7 +592,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 
 <script>
 (function(){
-  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='de-lb-flexihotin-forte', KEYWORD='flexihotin-forte', BTN='GRATIS ERHALTEN';
+  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='de-lb-flexihotin-forte', KEYWORD='flexihotin-forte', BTN='MIT GESCHENK BESTELLEN';
   if(''==='') document.body.classList.add('free');
   var qs=new URLSearchParams(location.search);
   // click-id из трекера: основной параметр cid; запасные — субы сетей и gclid Google
@@ -632,6 +635,8 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 
 
   // --- FAQ ---
+  // «Как заказать?» — шаги заказа раскрываются по клику (17.09)
+  Array.prototype.forEach.call(document.querySelectorAll('.howq'),function(b){ b.addEventListener('click',function(){ var ol=b.nextElementSibling, o=b.getAttribute('aria-expanded')==='true'; b.setAttribute('aria-expanded',o?'false':'true'); if(ol) ol.hidden=o; }); });
   document.querySelectorAll('.q button').forEach(function(btn){
     btn.addEventListener('click',function(){ var q=btn.parentElement, a=q.querySelector('.ans');
       if(q.classList.contains('open')){ q.classList.remove('open'); a.style.maxHeight=null; }
